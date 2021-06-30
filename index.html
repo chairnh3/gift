@@ -22,9 +22,13 @@
       var user = "user", password = "123456";
       var temUser = document.form1.username.value;
       var temPassword = document.form1.password.value;
-      if(user==temUser && password==temPassword)
-      alert("登入成功!");
-      else alert("帳號或密碼錯誤!");
+      if(user==temUser && password==temPassword){
+        alert("登入成功!");
+        window.location.href="登陆后显示的页面"; //在这里进行页面跳转
+       }
+      else{
+        alert("帳號或密碼錯誤!");
+       }
      }
   </script>
 
