@@ -6,21 +6,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
 </style>
-<SCRIPT language="javascript">
-<!-- hide javascript from old browser
-var password = prompt("請輸入登入密碼﹖","")
 
-if (password == 'abc') {
-self.location = 'ok.html'
-}
-
-else {
-self.location = 'wrong.html'
-}
-
-// done hiding -->
-</SCRIPT>
 </head>
-<body bgcolor="#ffffff">
+<body>
+
+  <form id="form1" name="form1" method="post" action="" >
+    用户名:<input type="text" name="username" />
+    <br /><br />
+    密码:<input type="password" name="password" />
+    <br /><br />
+    <input type="button" value="登入" onclick="check();"/><input type="reset" value="重置" />
+  </form>
+  <script language="javascript">
+    function check(){
+      var user = "user", password = "123456";
+      var temUser = document.form1.username.value;
+      var temPassword = document.form1.password.value;
+      if(user==temUser && password==temPassword)
+      alert("登入成功!");
+      else alert("用户名或密码错误!");
+     }
+  </script>
+
 </body>
 </html>
