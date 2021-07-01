@@ -19,20 +19,15 @@
   </form>
   <script language="javascript">
     function check(){
-      var user = "s1110842035", password = "921206";
-      var user = "s1110842037", password = "930815";
-      var user = "s1110842045", password = "930715";
-      var temUser = document.form1.username.value;
-      var temPassword = document.form1.password.value;
-      if(user==temUser && password==temPassword){
-        alert("登入成功!");
-        window.location.href="登陆后显示的页面"; //在这里进行页面跳转
-       }
-      else{
-        alert("帳號或密碼錯誤!");
-        window.location.href="https://chairnh3.github.io/0yiyi.002";
-       }
-     }
+      var done=0;
+      var username = document.form1.username.value;
+username=username.toLowerCase();
+      var password = document.form1.password.value;
+password=password.toLowerCase();
+if (username=="s1110842037" && password=="930815") { alert("登入成功！"); window.location="登入後會出現的網站"; done=1; } 
+if (done==0) { alert("帳號或密碼錯誤！"); window.location.href="https://chairnh3.github.io/0yiyi.002"; } 
+} 
+
   </script>
 
 </body>
